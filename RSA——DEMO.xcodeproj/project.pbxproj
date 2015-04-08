@@ -14,6 +14,10 @@
 		FB707B2E1AD3D6C100A70355 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB707B2D1AD3D6C100A70355 /* Images.xcassets */; };
 		FB707B311AD3D6C100A70355 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB707B2F1AD3D6C100A70355 /* LaunchScreen.xib */; };
 		FB707B3D1AD3D6C100A70355 /* RSA__DEMOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB707B3C1AD3D6C100A70355 /* RSA__DEMOTests.m */; };
+		FBB7DEC81AD51433003A4E11 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB7DEC71AD51433003A4E11 /* Security.framework */; };
+		FBB7DECB1AD529C4003A4E11 /* private_key.p12 in Resources */ = {isa = PBXBuildFile; fileRef = FBB7DEC91AD529C4003A4E11 /* private_key.p12 */; };
+		FBB7DECC1AD529C4003A4E11 /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = FBB7DECA1AD529C4003A4E11 /* public_key.der */; };
+		FBB7DECF1AD52A0D003A4E11 /* RSAEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB7DECE1AD52A0D003A4E11 /* RSAEncryptor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,11 @@
 		FB707B361AD3D6C100A70355 /* RSA——DEMOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RSA——DEMOTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB707B3B1AD3D6C100A70355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB707B3C1AD3D6C100A70355 /* RSA__DEMOTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSA__DEMOTests.m; sourceTree = "<group>"; };
+		FBB7DEC71AD51433003A4E11 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FBB7DEC91AD529C4003A4E11 /* private_key.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = private_key.p12; sourceTree = "<group>"; };
+		FBB7DECA1AD529C4003A4E11 /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = public_key.der; sourceTree = "<group>"; };
+		FBB7DECD1AD52A0D003A4E11 /* RSAEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAEncryptor.h; sourceTree = "<group>"; };
+		FBB7DECE1AD52A0D003A4E11 /* RSAEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAEncryptor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBB7DEC81AD51433003A4E11 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +73,11 @@
 		FB707B141AD3D6C100A70355 = {
 			isa = PBXGroup;
 			children = (
+				FBB7DECD1AD52A0D003A4E11 /* RSAEncryptor.h */,
+				FBB7DECE1AD52A0D003A4E11 /* RSAEncryptor.m */,
+				FBB7DEC91AD529C4003A4E11 /* private_key.p12 */,
+				FBB7DECA1AD529C4003A4E11 /* public_key.der */,
+				FBB7DEC71AD51433003A4E11 /* Security.framework */,
 				FB707B1F1AD3D6C100A70355 /* RSA——DEMO */,
 				FB707B391AD3D6C100A70355 /* RSA——DEMOTests */,
 				FB707B1E1AD3D6C100A70355 /* Products */,
@@ -202,6 +217,8 @@
 				FB707B2C1AD3D6C100A70355 /* Main.storyboard in Resources */,
 				FB707B311AD3D6C100A70355 /* LaunchScreen.xib in Resources */,
 				FB707B2E1AD3D6C100A70355 /* Images.xcassets in Resources */,
+				FBB7DECB1AD529C4003A4E11 /* private_key.p12 in Resources */,
+				FBB7DECC1AD529C4003A4E11 /* public_key.der in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB707B291AD3D6C100A70355 /* ViewController.m in Sources */,
+				FBB7DECF1AD52A0D003A4E11 /* RSAEncryptor.m in Sources */,
 				FB707B261AD3D6C100A70355 /* AppDelegate.m in Sources */,
 				FB707B231AD3D6C100A70355 /* main.m in Sources */,
 			);
@@ -414,6 +432,7 @@
 				FB707B421AD3D6C100A70355 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB707B431AD3D6C100A70355 /* Build configuration list for PBXNativeTarget "RSA——DEMOTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +441,7 @@
 				FB707B451AD3D6C100A70355 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

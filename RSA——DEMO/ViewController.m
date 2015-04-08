@@ -16,12 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+//    NSString *m= @"Your HEX modulus here";
+//    NSString *e=@"Your HEX exponent";
+//    NSString * hexString= @"Your HEX message here";
+//    
+//    NSData *decryptedIPKC= [self decryptIPKC:hexString modulus:m exponent:e];
+//    NSLog(@"ESTE ES EL NSDATA %@", decryptedIPKC.description);
 }
 
 @end
