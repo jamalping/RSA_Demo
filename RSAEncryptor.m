@@ -35,6 +35,7 @@
     NSData *derData = [[NSData alloc] initWithContentsOfFile:derFilePath];
     [self loadPublicKeyFromData: derData];
 }
+
 -(void) loadPublicKeyFromData: (NSData*) derData
 {
     publicKey = [self getPublicKeyRefrenceFromeData: derData];
@@ -93,7 +94,13 @@
 }
 
 #pragma mark - Encrypt
-
+/**
+ * @brief  用base64加密
+ *
+ * @param string 需加密的字符串
+ *
+ * @return 加密后的字符串
+ */
 -(NSString*) rsaEncryptString:(NSString*)string {
     NSData* data = [string dataUsingEncoding:NSUTF8StringEncoding];
     NSData* encryptedData = [self rsaEncryptData: data];
@@ -131,7 +138,6 @@
 
 
 #pragma mark - Decrypt
-
 -(NSString*) rsaDecryptString:(NSString*)string {
     NSData* data = [[NSData alloc] initWithBase64EncodedString:string options:NSDataBase64DecodingIgnoreUnknownCharacters];
     NSData* decryptData = [self rsaDecryptData: data];
