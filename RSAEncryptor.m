@@ -30,6 +30,7 @@
     return privateKey;
 }
 
+// 
 -(void) loadPublicKeyFromFile: (NSString*) derFilePath
 {
     NSData *derData = [[NSData alloc] initWithContentsOfFile:derFilePath];
@@ -165,15 +166,13 @@
 
 #pragma mark - Class Methods
 
-static RSAEncryptor* sharedInstance = nil;
-
-+(void) setSharedInstance: (RSAEncryptor*)instance
-{
-    sharedInstance = instance;
-}
-
-+(RSAEncryptor*) sharedInstance
-{
++(RSAEncryptor*) sharedInstance {
+    static RSAEncryptor* sharedInstance = nil;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[RSAEncryptor alloc] init];
+    });
     return sharedInstance;
 }
 
