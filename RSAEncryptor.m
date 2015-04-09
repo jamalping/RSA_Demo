@@ -30,7 +30,6 @@
     return privateKey;
 }
 
-// 
 -(void) loadPublicKeyFromFile: (NSString*) derFilePath
 {
     NSData *derData = [[NSData alloc] initWithContentsOfFile:derFilePath];

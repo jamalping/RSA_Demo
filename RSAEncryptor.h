@@ -49,7 +49,7 @@
 /**
  * @brief  加密解密对象单例
  *
- * @return 单例
+ * @return 单例对象
  */
 
 +(RSAEncryptor*) sharedInstance;
